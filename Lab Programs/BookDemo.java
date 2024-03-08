@@ -1,20 +1,15 @@
 class Book{
 	private String author_name;
-	private String  Title;
+	
 	public String getAuthorName(String author_name){
-          
-	}
-	public String getTitle(String Title){
-
+          this.author_name=author_name;
 	}
 }
 class Book_Publication extends Book{
 	private String  Title;
-    public getAuthorName(String author_name){
-        
-	}
+    
 	public getTitle(String Title){
-
+        
 	}
 }
 class Paper_Publication extends Book{
@@ -28,6 +23,12 @@ class Paper_Publication extends Book{
 }
 public class BookDemo{
 	public static void main(String[] args){
-       Book b1 = null;
+	   int temp = Int.parseInt(args[0]);
+       if(temp==1){
+       	Book b1 = new Book_Publication();
+       }else{
+       	Book b1 = new Paper_Publication();
+       }
+       b1.getAuthorName(args[1]);
 	}
 }
