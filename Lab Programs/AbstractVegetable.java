@@ -1,52 +1,51 @@
-import java.util.Scanner;
 abstract class Vegetable{
 	String color;
-	
-    abstract void display(String color);
+	String vegname;
+
+	abstract public String toString();
+    
 }
 class Potato extends Vegetable{
-	Scanner sc=new Scanner(System.in);
-	Potato(){
-       System.out.println("Enter the name and color of Potato:");
-       color = sc.nextLine();
-       display(color);
+	Potato(String name,String color){
+       super.vegname=name;
+       super.color=color;
 	}
-    void display(String color){
-    	System.out.println(color);
-    }
+	public String toString(){
+		return super.vegname+"_"+super.color;
+	}
+    
 }
 class Brinjal extends Vegetable{
-	Scanner sc=new Scanner(System.in);
-	Brinjal(){
-		 System.out.println("Enter the name and color of Brinjal:");
-         color = sc.nextLine();
-         display(color);
+	
+	Brinjal(String name,String color){
+	   super.vegname=name;
+       super.color=color;
     }
-    void display(String color){
-    	System.out.println(color);
-    }
+    public String toString(){
+		return super.vegname+"_"+super.color;
+	}
+   
 }
 class Tomato extends Vegetable{
-	Scanner sc=new Scanner(System.in);
-    Tomato(){
-		 System.out.println("Enter the name and color of Tomato:");
-         color = sc.nextLine();
-         display(color);
-	}
-	void display(String color){
-    	System.out.println(color);
+	Tomato(String name,String color){
+	   super.vegname=name;
+       super.color=color;
     }
+    public String toString(){
+		return super.vegname+"_"+super.color;
+	}
+	
 
 }
 
 public class AbstractVegetable{
 	public static void main(String [] args){
 
-       Potato v1 = new Potato();
-       
-       Brinjal v2= new Brinjal();
-       
-       Tomato v3= new Tomato();
-       
+       Potato p = new Potato("Potato","Brown");
+       System.out.println(p);
+       Brinjal b= new Brinjal("Brinjal","Purple");
+       System.out.println(b);
+       Tomato t = new Tomato("Tomato","Red");
+       System.out.println(t);
 	}
 }
