@@ -5,9 +5,7 @@ class  Member{
 	int PhoneNumber;
 	String Address;
 	Double Salary;
-	void printSalary(double salary){
-         
-	}
+
 	Member(){
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter the name of the member:");
@@ -17,7 +15,7 @@ class  Member{
 		System.out.println("Enter the Phone Number of the member:");
 		this.PhoneNumber=sc.nextInt();
 		System.out.println("Enter the Address of the member:");
-		this.Address=sc.nextLine();
+		this.Address=sc.next();
 		System.out.println("Enter the Salary of the member:");
 		this.Salary=sc.nextDouble();
 	}
@@ -28,12 +26,21 @@ class Employee extends Member{
 	String Department;
     
     Employee(){
+    	super();
     	System.out.println("Enter the Specialization of the Employee:");
     	this.Specialization=sc.nextLine();
     	System.out.println("Enter the Department of the Employee:");
     	this.Department = sc.nextLine();
     }
-
+    void printEmployeeDetails(){
+    	System.out.println("name="+Name);
+    	System.out.println("age="+Age);
+    	System.out.println("PhoneNumber="+PhoneNumber);
+    	System.out.println("Address="+Address);
+        System.out.println("Salary="+Salary);
+        System.out.println("Specialization="+Specialization);
+        System.out.println("Department="+Department);
+    }
 }
 class Manager extends Member{
 	Scanner sc=new Scanner(System.in);
@@ -45,11 +52,22 @@ class Manager extends Member{
     	System.out.println("Enter the Department of the Employee:");
     	this.Department = sc.nextLine();
 	}
+
+	void printManagerDetails(){
+    	System.out.println("name="+Name);
+    	System.out.println("age="+Age);
+    	System.out.println("PhoneNumber="+PhoneNumber);
+    	System.out.println("Address="+Address);
+        System.out.println("Salary="+Salary);
+        System.out.println("Specialization="+Specialization);
+        System.out.println("Department="+Department);
+    }
 }
 public class MemberDemo{
 	public static void main(String [] args){
        Employee E1 = new Employee();
-
+       E1.printEmployeeDetails();
        Manager M1 = new Manager();
+       M1.printManagerDetails();
 	}
 }
