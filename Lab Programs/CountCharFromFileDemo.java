@@ -6,7 +6,7 @@ public class CountCharFromFileDemo{
     int charCount=0;
     int wordCount=0;
     try{
-    	// int i=0;
+    	
     	File file = new File("Rashi.txt");
         Scanner sc=new Scanner(file);
         while(sc.hasNextLine()){
@@ -19,7 +19,7 @@ public class CountCharFromFileDemo{
             	}
        		}
             
-            // i++;
+            
             String arr[]=line.split(" ");
             wordCount+=arr.length;
         }
