@@ -1,11 +1,11 @@
 class GM implements Runnable{
     public void run(){
     	try{
-    		int n=0;
+    		
     	while(true){
     		System.out.println("Good Morning");
     		Thread.sleep(1000);
-    		// n++;
+    		
     	}
     	}
     	catch(Exception e){
@@ -16,11 +16,11 @@ class GM implements Runnable{
 class GA implements Runnable{
     public void run(){
     	try{
-    		int n=0;
+    		
     	while(true){
     		System.out.println("Good Afternoon");
     		Thread.sleep(3000);
-    		n++;
+    		
     	}
     }catch(Exception e){
         e.printStackTrace();
