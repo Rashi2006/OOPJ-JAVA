@@ -9,7 +9,7 @@ public class Practice{
             int b = sc.nextInt();
             c=a/b;
         }catch(Exception e){
-            System.out.println(e);
+            System.out.println(c);
         }finally{
             System.out.println(c);
         }
